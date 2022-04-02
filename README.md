@@ -16,6 +16,25 @@ pytorch 1.4.0
 
 smile `pip install smile`
 
+## Function
+### Run jackhmmer
+Run Jackhmmer following the Jackhmmer guide book(http://eddylab.org/software/hmmer/Userguide.pdf), and fit the output to the `aln_example/sample.aln` format. Here are the hmmer parameters:
+```
+phmmer -E 1 --domE 1 --incE 0.01 --incdomE 0.03 --mx BLOSUM62 --pextend 0.4 --popen 0.02 -o {out_path} -A {sto_path} --notextw --cpu {cpu_num} {fasta_path} {db_path}
+```
+
+### Calculate PSSM
+```
+python calculate_pssm.py --aln_path ./aln_example/sample.aln --save_path ./feat_example/sample.pssm --method 1 
+```
+#### Parameters
+*aln_path* - MSA file path
+
+*save_path* - save pssm feature file path
+
+*method* - PSSM calculation method num, `0`, `1` or `2`, Usually using `1`.
+
+*ss_path*(optional) - secondary structure label file path, see `./ss_example/sample.ss` for an example.
 ## Upcoming
 The `model_condgated_cbe_asp.py` is the core part of the EnsembleASP network. 
 We are working on the code cleaning and we will check in all the code regarding the entire pipeline.
