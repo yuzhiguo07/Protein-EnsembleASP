@@ -10,26 +10,8 @@ import configparser
 import os
 import numpy as np
 import random
-import model
-import fcmodel
-import model_bilstm
-import deepaclstm
-import deepaclstm_aspp
-import gatedaclstm_aspp
-import model_gatedconv
-import model_gatedcondconv
-import model_dl
-import model_cnn_aspp
-import model_lstm_aspp
-import deepaclstm_aspp02
-import model_cbe
-import model_cbe_aspp
-import model_gated_cbe
-import model_gated_cbe_aspp
-import model_condgated_cbe_aspp
-import model_mufold
 
-import informer_model.model_informer_encoder as informer_encoder
+import model_condgated_cbe_aspp
 import valid
 
 import loaddata
