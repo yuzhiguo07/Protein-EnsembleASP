@@ -35,6 +35,9 @@ python calculate_pssm.py --aln_path ./aln_example/sample.aln --save_path ./feat_
 *method* - PSSM calculation method num, `0`, `1` or `2`, Usually using `1`.
 
 *ss_path*(optional) - secondary structure label file path, see `./ss_example/sample.ss` for an example.
-## Upcoming
-The `model_condgated_cbe_asp.py` is the core part of the EnsembleASP network. 
-We are working on the code cleaning and we will check in all the code regarding the entire pipeline.
+
+### Training
+```
+CUDA_VISIBLE_DEVICES=0 python -u train.py --data_fpath='data/' --train_fname='train.feat' --valid_fname='valid.feat' --test_fname='cb513.feat' --test_mark='cb513' --load_model=False --reset_optimizer=True 
+```
+
